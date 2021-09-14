@@ -1,7 +1,5 @@
 import { useHistory } from 'react-router-dom'
 
-
-
 import Illustration from '../assets/images/Illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
@@ -14,11 +12,11 @@ import { useAuth } from '../hooks/useAuth';
 
 export function Home() {
   const history = useHistory();
-  const { user ,signInWithGoogle } = useAuth()
+  const { user, signInWithGoogle } = useAuth()
 
- async function handleCreateRoom() {
+  async function handleCreateRoom() {
     if (!user) {
-     await signInWithGoogle()
+      await signInWithGoogle()
     }
     history.push('/rooms/new')
   }
@@ -32,7 +30,7 @@ export function Home() {
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
 
       </aside>
-      <main> 
+      <main>
 
         <div className="main-content">
           <img src={logoImg} alt="letmeask" />
@@ -45,10 +43,10 @@ export function Home() {
           <div className="serarator">ou entre em uma sala</div>
 
           <form>
-            <input 
-               type="text" 
-               placeholder="Digite o Código da sala" 
-               />
+            <input
+              type="text"
+              placeholder="Digite o Código da sala"
+            />
             <Button type="submit">
               Entrar na sala
             </Button>

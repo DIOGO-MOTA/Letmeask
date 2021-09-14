@@ -11,6 +11,10 @@ import '../styles/auth.scss';
 
 export function NewRoon() {
 
+  async function handleCreateRoon () {
+
+  }
+
 //  const {} = useAuth()
 
   return (
@@ -29,7 +33,7 @@ export function NewRoon() {
 
           <h2>Criar uma nova sala</h2>
 
-          <form>
+          <form onSubmit={handleCreateRoon}>
             <input 
                type="text" 
                placeholder="Nome da sala" 
